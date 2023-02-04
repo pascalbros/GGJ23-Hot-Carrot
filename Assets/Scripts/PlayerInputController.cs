@@ -8,20 +8,6 @@ public class PlayerInputController : MonoBehaviour
 {
     public TinyCarController carController;
 
-    public enum InputType {
-        None, Axis, RawAxis, Key, Button
-    }
-
-    [System.Serializable]
-    public struct InputValue {
-        [Tooltip("Type of input.")]
-        public InputType type;
-        [Tooltip("Name of the input entry.")]
-        public string name;
-        [Tooltip("Returns the negative value when using an axis type.")]
-        public bool invert;
-    }
-
     public Vector2 moveInput;
     public bool isAccelerating;
     public bool boostInput;
@@ -52,18 +38,6 @@ public class PlayerInputController : MonoBehaviour
 
         carController.setSteering(steeringDelta);
         carController.setMotor(motorDelta);
-    }
-
-    public float getInput(InputValue v) {
-        float value = 0;
-        switch (v.type) {
-            case InputType.Axis: value = Input.GetAxis(v.name); break;
-            case InputType.RawAxis: value = Input.GetAxisRaw(v.name); break;
-            case InputType.Key: value = Input.GetKey((KeyCode)int.Parse(v.name)) ? 1 : 0; break;
-            case InputType.Button: value = Input.GetButton(v.name) ? 1 : 0; break;
-        }
-        if (v.invert) value *= -1;
-        return Mathf.Clamp01(value);
     }
 
     public void Move(InputAction.CallbackContext context) {

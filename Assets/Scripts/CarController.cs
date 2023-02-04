@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    void Start() {
-        
-    }
+    public GameObject[] bodies;
 
-    void Update() {
-        
+    public void ChangeBody(int playerIndex) {
+        foreach (var body in bodies) {
+            body.SetActive(false);
+        }
+        bodies[playerIndex].SetActive(true);
     }
 }
