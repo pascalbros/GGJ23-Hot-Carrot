@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MatchMaker : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class MatchMaker : MonoBehaviour {
     }
 
     public void OnPlayerAdded(GameObject player) {
+        Debug.Log(player.transform.parent.name);
         currentPlayerIndex += 1;
         playersCount = currentPlayerIndex + 1;
         currentPlayers[currentPlayerIndex] = player;
@@ -27,11 +29,16 @@ public class MatchMaker : MonoBehaviour {
         var rotation = new Vector3(0, reference.eulerAngles.y, 0);
         player.transform.position = reference.position;
         player.transform.eulerAngles = rotation;
-
         player.GetComponent<CarController>().ChangeBody(currentPlayerIndex);
+        player.transform.GetComponent<PlayerInputController>().enabled = false;
+    }
+
+    public void OnGameStart() {
+        ChangeInputForPlayers(true);
     }
 
     public void OnTimeout() {
+        ChangeInputForPlayers(false);
         var playerWithTrophy = GetTrophyHolder();
         if (playerWithTrophy) {
             for (int i = 0; i < currentPlayers.Length; i++) {
@@ -42,6 +49,13 @@ public class MatchMaker : MonoBehaviour {
         } else {
             // Tie unlikely
             Debug.Log("Tie!");
+        }
+    }
+
+    public void ChangeInputForPlayers(bool enabled) {
+        foreach (var player in currentPlayers) {
+            if (!player) { return; }
+            player.transform.GetComponent<PlayerInputController>().enabled = enabled;
         }
     }
 
