@@ -202,7 +202,7 @@
                 {
                     "name": "",
                     "id": "ee3d0cd2-254e-47a7-a8cb-bc94d9658c54",
-                    "path": "<Joystick>/trigger",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
