@@ -37,7 +37,7 @@ public class PlayerInputController : MonoBehaviour
     private float boostTimer = 0;
 
     void Start() {
-
+        MatchMaker.current.OnPlayerAdded(gameObject);
     }
 
     void Update() {

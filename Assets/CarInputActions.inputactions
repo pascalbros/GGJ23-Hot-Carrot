@@ -212,6 +212,17 @@
                 },
                 {
                     "name": "",
+                    "id": "96d55dfe-6b89-4e61-9958-f020c9ab26b5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Turbo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "75f5efaa-0097-4efe-a1f6-05686c96d7c7",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
