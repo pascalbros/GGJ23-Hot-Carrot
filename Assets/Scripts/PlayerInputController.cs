@@ -11,6 +11,7 @@ public class PlayerInputController : MonoBehaviour
     public Vector2 moveInput;
     public bool isAccelerating;
     public bool boostInput;
+    public bool canMove;
 
     [Header("Input")]
     [Tooltip("For how long the boost should last in seconds.")]
@@ -22,11 +23,17 @@ public class PlayerInputController : MonoBehaviour
 
     private float boostTimer = 0;
 
+
     void Start() {
         MatchMaker.current.OnPlayerAdded(gameObject);
     }
 
     void Update() {
+        if (!canMove) {
+            isAccelerating = false;
+            boostInput = false;
+            moveInput.y = 0;
+        }
         float motorDelta = moveInput.y;
         float steeringDelta = moveInput.x;
         if (boostInput && boostTimer == 0) {
