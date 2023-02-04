@@ -3,7 +3,12 @@ guid: 90243f3be20f34fcf8ab5d84f5f0aa91
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: car_paint
+    second: {fileID: 2100000, guid: 2e8c05e0185004dca9dea31d5dd882b8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
