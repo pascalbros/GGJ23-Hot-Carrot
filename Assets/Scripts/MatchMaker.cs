@@ -27,6 +27,8 @@ public class MatchMaker : MonoBehaviour {
         var rotation = new Vector3(0, reference.eulerAngles.y, 0);
         player.transform.position = reference.position;
         player.transform.eulerAngles = rotation;
+
+        player.GetComponent<CarController>().ChangeBody(currentPlayerIndex);
     }
 
     public void OnTimeout() {
