@@ -46,6 +46,7 @@ public class MatchMaker : MonoBehaviour {
             for (int i = 0; i < currentPlayers.Length; i++) {
                 if (currentPlayers[i] == playerWithTrophy) {
                     winner = i;
+                    Camera.main.GetComponent<CameraController>().OnTimeout(currentPlayers[i]);
                 }
             }
         }

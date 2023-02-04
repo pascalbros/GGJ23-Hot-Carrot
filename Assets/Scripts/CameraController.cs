@@ -27,4 +27,11 @@ public class CameraController : MonoBehaviour
         targetPosition = Vector3.Lerp(targetPosition, followPosition + targetRotation * Vector3.back * topDownDistance, Mathf.Clamp01(topDownInterpolation <= 0 ? 1 : topDownInterpolation * deltaTime));
         transform.SetPositionAndRotation(targetPosition, targetRotation);
     }
+
+    public void OnTimeout(GameObject winner) {
+        if (!winner) { return; }
+        whatToFollow = winner.transform;
+        topDownDistance = 21;
+        topDownAngle.x = 25;
+    }
 }

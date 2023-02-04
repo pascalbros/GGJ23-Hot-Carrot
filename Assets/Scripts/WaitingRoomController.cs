@@ -21,7 +21,7 @@ public class WaitingRoomController : MonoBehaviour
     private WaitingState state = WaitingState.INVALID;
     private float currentTime = 6;
 
-    private static readonly string waitingBaseLabel = "WAITING FOR OTHER\nPLAYERS TO JOIN";
+    private static readonly string waitingBaseLabel = "WAITING FOR OTHER PLAYERS\nPRESS ANY BUTTON TO JOIN";
 
     void Update() {
         switch (state) {
