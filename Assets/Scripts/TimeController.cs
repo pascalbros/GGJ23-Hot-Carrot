@@ -22,7 +22,7 @@ public class TimeController : MonoBehaviour
         textMesh.text = GetFormattedTime(Mathf.Max(0, remainingTime));
         if (remainingTime < 0) {
             isValid = false;
-            GetComponent<MatchMaker>().OnTimeout();
+            MatchMaker.current.OnTimeout();
             DestroyImmediate(this);
         }
     }
