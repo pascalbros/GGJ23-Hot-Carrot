@@ -13,6 +13,12 @@ public class TrophyController : MonoBehaviour {
         
     }
 
+    private void Update() {
+        if (trophy) {
+            trophy.transform.position = transform.position + positionOffset;
+        }
+    }
+
     private void FixedUpdate() {
         if (graceTimer > 0) {
             graceTimer -= Time.fixedDeltaTime;
@@ -27,13 +33,12 @@ public class TrophyController : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.transform.parent && other.transform.parent.CompareTag("Trophy")) {
+        if (other.transform.CompareTag("Trophy")) {
             GetTheTrophy(other.gameObject);
         }
     }
 
     private void OnCollisionEnter(Collision collision) {
-        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Player")) {
             var trophy = collision.gameObject.GetComponent<TrophyController>().GimmeTheTrophy(this);
             if (trophy != null) {
@@ -43,8 +48,6 @@ public class TrophyController : MonoBehaviour {
     }
 
     private void GetTheTrophy(GameObject trophy) {
-        trophy.transform.parent = transform;
-        trophy.transform.localPosition = positionOffset;
         trophy.GetComponent<Collider>().enabled = false;
         this.trophy = trophy;
         graceTimer = 1;

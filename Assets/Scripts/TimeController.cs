@@ -9,6 +9,7 @@ public class TimeController : MonoBehaviour
     public float initialTime;
 
     private float remainingTime;
+    private bool isValid = true;
 
 
     void Start() {
@@ -16,8 +17,14 @@ public class TimeController : MonoBehaviour
     }
 
     void Update() {
+        if (!isValid) { return; }
         remainingTime -= Time.deltaTime;
         textMesh.text = GetFormattedTime(Mathf.Max(0, remainingTime));
+        if (remainingTime < 0) {
+            isValid = false;
+            GetComponent<MatchMaker>().OnTimeout();
+            DestroyImmediate(this);
+        }
     }
 
     string GetFormattedTime(float time) {

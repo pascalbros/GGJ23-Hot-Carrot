@@ -1464,5 +1464,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trophy
       objectReference: {fileID: 0}
+    - target: {fileID: 4573082073004275308, guid: baff20646925441eda4ca232962e6d08, type: 3}
+      propertyPath: yTranslationSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573082073004275308, guid: baff20646925441eda4ca232962e6d08, type: 3}
+      propertyPath: initialYTranslation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baff20646925441eda4ca232962e6d08, type: 3}
