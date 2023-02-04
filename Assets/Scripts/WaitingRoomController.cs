@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class WaitingRoomController : MonoBehaviour
@@ -45,6 +46,7 @@ public class WaitingRoomController : MonoBehaviour
 
     public void OnGameEnd(int winnerIndex) {
         state = WaitingState.END;
+        waitingText.fontSize = 50;
         waitingText.text = winnerIndex >= 0 ? "Player " + (winnerIndex + 1) + " wins!" : "Tie!";
         waitingText.gameObject.SetActive(true);
         countdownTimerText.gameObject.SetActive(false);
@@ -72,8 +74,8 @@ public class WaitingRoomController : MonoBehaviour
 
     private void OnStateShouldStart() {
         state = WaitingState.COUNTDOWN;
+        waitingText.fontSize = 200;
         currentTime = 3.99f;
-        Debug.Log("Should start");
     }
 
     private void OnStateCountdown() {
