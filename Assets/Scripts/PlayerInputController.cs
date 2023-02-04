@@ -24,18 +24,9 @@ public class PlayerInputController : MonoBehaviour
 
     public Vector2 moveInput;
     public bool isAccelerating;
+    public bool boostInput;
 
     [Header("Input")]
-    [Tooltip("Input type to check to make the vehicle move forward.")]
-    public InputValue forwardInput = new InputValue() { type = InputType.RawAxis, name = "Vertical", invert = false };
-    [Tooltip("Input type to check to make the vehicle move backward.")]
-    public InputValue reverseInput = new InputValue() { type = InputType.RawAxis, name = "Vertical", invert = true };
-    [Tooltip("Input type to check to make the vehicle turn right.")]
-    public InputValue steerRightInput = new InputValue() { type = InputType.RawAxis, name = "Horizontal", invert = false };
-    [Tooltip("Input type to check to make the vehicle turn left.")]
-    public InputValue steerLeftInput = new InputValue() { type = InputType.RawAxis, name = "Horizontal", invert = true };
-    [Tooltip("Input type to check to give the vehicle a speed boost.")]
-    public InputValue boostInput = new InputValue() { type = InputType.Key, name = ((int)KeyCode.LeftShift).ToString(), invert = false };
     [Tooltip("For how long the boost should last in seconds.")]
     public float boostDuration = 1;
     [Tooltip("How long to wait after a boost has been used before it can be used again, in seconds.")]
@@ -52,7 +43,7 @@ public class PlayerInputController : MonoBehaviour
     void Update() {
         float motorDelta = moveInput.y;
         float steeringDelta = moveInput.x;
-        if (getInput(boostInput) == 1 && boostTimer == 0) {
+        if (boostInput && boostTimer == 0) {
             boostTimer = boostCoolOff + boostDuration;
         } else if (boostTimer > 0) {
             boostTimer = Mathf.Max(boostTimer - Time.deltaTime, 0);
@@ -92,7 +83,10 @@ public class PlayerInputController : MonoBehaviour
     }
 
     public void Turbo(InputAction.CallbackContext context) {
-        if (!context.started) { return; }
-        Debug.Log("TODO: Turbo");
+        if (context.phase == InputActionPhase.Performed) {
+            boostInput = true;
+        } else if (context.phase == InputActionPhase.Canceled) {
+            boostInput = false;
+        }
     }
 }

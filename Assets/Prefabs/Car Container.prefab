@@ -10328,26 +10328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carController: {fileID: 586245974893806194}
   moveInput: {x: 0, y: 0}
-  forwardInput:
-    type: 2
-    name: Vertical
-    invert: 0
-  reverseInput:
-    type: 2
-    name: Vertical
-    invert: 1
-  steerRightInput:
-    type: 2
-    name: Horizontal
-    invert: 0
-  steerLeftInput:
-    type: 2
-    name: Horizontal
-    invert: 1
-  boostInput:
-    type: 3
-    name: 304
-    invert: 0
+  isAccelerating: 0
+  boostInput: 0
   boostDuration: 1
   boostCoolOff: 0
   boostMultiplier: 2
@@ -15608,7 +15590,19 @@ MonoBehaviour:
     m_ActionId: 57b491ce-4f9c-489a-a4e9-1cd5b50ea32f
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6993140648453400339}
+        m_TargetAssemblyTypeName: PlayerInputController, Assembly-CSharp
+        m_MethodName: Turbo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 03d26d11-1540-4e10-8414-b71d6af99a6d
     m_ActionName: Player/Turbo[/Mouse/leftButton]
   - m_PersistentCalls:
