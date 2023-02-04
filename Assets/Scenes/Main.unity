@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 1056901093}
-  initialTime: 120
+  initialTime: 60
 --- !u!1 &1069897919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,6 +1157,7 @@ MonoBehaviour:
   - {fileID: 470448055}
   - {fileID: 218610408}
   - {fileID: 635568544}
+  waitingRoomController: {fileID: 152147050}
   playersCount: 0
 --- !u!1 &1154820357
 GameObject:

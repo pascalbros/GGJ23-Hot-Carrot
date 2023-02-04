@@ -7,6 +7,7 @@ public class MatchMaker : MonoBehaviour {
 
     public static MatchMaker current;
     public GameObject[] corners;
+    public WaitingRoomController waitingRoomController;
     public int playersCount = 0;
     readonly GameObject[] currentPlayers = new GameObject[4];
     int currentPlayerIndex = -1;
@@ -30,7 +31,7 @@ public class MatchMaker : MonoBehaviour {
         player.transform.position = reference.position;
         player.transform.eulerAngles = rotation;
         player.GetComponent<CarController>().ChangeBody(currentPlayerIndex);
-        player.transform.GetComponent<PlayerInputController>().enabled = false;
+        player.transform.GetComponent<PlayerInputController>().canMove = false;
     }
 
     public void OnGameStart() {
@@ -39,23 +40,22 @@ public class MatchMaker : MonoBehaviour {
 
     public void OnTimeout() {
         ChangeInputForPlayers(false);
+        var winner = -1;
         var playerWithTrophy = GetTrophyHolder();
         if (playerWithTrophy) {
             for (int i = 0; i < currentPlayers.Length; i++) {
                 if (currentPlayers[i] == playerWithTrophy) {
-                    Debug.Log("Player " + (i+1) + " wins!");
+                    winner = i;
                 }
             }
-        } else {
-            // Tie unlikely
-            Debug.Log("Tie!");
         }
+        waitingRoomController.OnGameEnd(winner);
     }
 
     public void ChangeInputForPlayers(bool enabled) {
         foreach (var player in currentPlayers) {
             if (!player) { return; }
-            player.transform.GetComponent<PlayerInputController>().enabled = enabled;
+            player.transform.GetComponent<PlayerInputController>().canMove = enabled;
         }
     }
 
