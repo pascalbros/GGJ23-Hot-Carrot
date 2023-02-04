@@ -106,8 +106,8 @@ namespace DavidJalbert
             sphereCollider = GetComponent<SphereCollider>();
 
             customPhysicMaterial = new PhysicMaterial();
-            customPhysicMaterial.bounciness = 0;
-            customPhysicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
+            customPhysicMaterial.bounciness = 1.0f;
+            customPhysicMaterial.bounceCombine = PhysicMaterialCombine.Average;
             customPhysicMaterial.staticFriction = 0;
             customPhysicMaterial.dynamicFriction = 0;
             customPhysicMaterial.frictionCombine = PhysicMaterialCombine.Minimum;

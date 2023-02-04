@@ -28,4 +28,30 @@ public class MatchMaker : MonoBehaviour {
         player.transform.position = reference.position;
         player.transform.eulerAngles = rotation;
     }
+
+    public void OnTimeout() {
+        var playerWithTrophy = GetTrophyHolder();
+        if (playerWithTrophy) {
+            for (int i = 0; i < currentPlayers.Length; i++) {
+                if (currentPlayers[i] == playerWithTrophy) {
+                    Debug.Log("Player " + (i+1) + " wins!");
+                }
+            }
+        } else {
+            // Tie unlikely
+            Debug.Log("Tie!");
+        }
+    }
+
+    private GameObject GetTrophyHolder() {
+        for (int i = 0; i < currentPlayers.Length; i++) {
+            var player = currentPlayers[i];
+            if (!player) { return null; }
+            var trophy = player.transform.GetComponentInChildren<TrophyController>().trophy;
+            if (trophy) {
+                return player;
+            }
+        }
+        return null;
+    }
 }

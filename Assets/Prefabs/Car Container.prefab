@@ -10347,7 +10347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trophy: {fileID: 0}
-  positionOffset: {x: 0, y: 5, z: 0}
+  positionOffset: {x: 0, y: 2, z: 0}
   graceTimer: 0
 --- !u!1 &586245974916026188
 GameObject:
@@ -15485,7 +15485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &586245975304516399
 Transform:
   m_ObjectHideFlags: 0
