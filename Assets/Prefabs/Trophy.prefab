@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233492584128137330}
   m_Layer: 0
-  m_Name: Carrot
+  m_Name: Trophy
   m_TagString: Trophy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

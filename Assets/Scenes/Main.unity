@@ -1462,7 +1462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 233492584128137331, guid: baff20646925441eda4ca232962e6d08, type: 3}
       propertyPath: m_Name
-      value: Carrot
+      value: Trophy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baff20646925441eda4ca232962e6d08, type: 3}
