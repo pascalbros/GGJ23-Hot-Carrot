@@ -9,6 +9,8 @@ public class MatchMaker : MonoBehaviour {
     public GameObject[] corners;
     public WaitingRoomController waitingRoomController;
     public int playersCount = 0;
+    public PlayerInputManager inputManager;
+
     readonly GameObject[] currentPlayers = new GameObject[4];
     int currentPlayerIndex = -1;
 
@@ -21,13 +23,12 @@ public class MatchMaker : MonoBehaviour {
     }
 
     public void OnPlayerAdded(GameObject player) {
-        Debug.Log(player.transform.parent.name);
         currentPlayerIndex += 1;
         playersCount = currentPlayerIndex + 1;
         currentPlayers[currentPlayerIndex] = player;
         var reference = corners[currentPlayerIndex].transform;
         reference.LookAt(Vector3.zero);
-        var rotation = new Vector3(0, reference.eulerAngles.y, 0);
+        var rotation = new Vector3(0, reference.eulerAngles.y + 45, 0);
         player.transform.position = reference.position;
         player.transform.eulerAngles = rotation;
         player.GetComponent<CarController>().ChangeBody(currentPlayerIndex);
@@ -35,6 +36,7 @@ public class MatchMaker : MonoBehaviour {
     }
 
     public void OnGameStart() {
+        inputManager.DisableJoining();
         ChangeInputForPlayers(true);
     }
 
@@ -56,7 +58,11 @@ public class MatchMaker : MonoBehaviour {
     public void ChangeInputForPlayers(bool enabled) {
         foreach (var player in currentPlayers) {
             if (!player) { return; }
-            player.transform.GetComponent<PlayerInputController>().canMove = enabled;
+            var inputController = player.transform.GetComponent<PlayerInputController>();
+            inputController.canMove = enabled;
+            if (!enabled) {
+                inputController.ResetInput();
+            }
         }
     }
 

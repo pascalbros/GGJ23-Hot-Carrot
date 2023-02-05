@@ -30,9 +30,8 @@ public class PlayerInputController : MonoBehaviour
 
     void Update() {
         if (!canMove) {
-            isAccelerating = false;
-            boostInput = false;
-            moveInput.y = 0;
+            carController.setSteering(moveInput.x);
+            return;
         }
         float motorDelta = moveInput.y;
         float steeringDelta = moveInput.x;
@@ -69,5 +68,13 @@ public class PlayerInputController : MonoBehaviour
         } else if (context.phase == InputActionPhase.Canceled) {
             boostInput = false;
         }
+    }
+
+    public void ResetInput() {
+        boostInput = false;
+        isAccelerating = false;
+        moveInput = Vector2.zero;
+        carController.setBoostMultiplier(1);
+        carController.setMotor(0);
     }
 }

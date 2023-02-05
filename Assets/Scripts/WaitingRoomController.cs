@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaitingRoomController : MonoBehaviour
 {
@@ -21,7 +19,7 @@ public class WaitingRoomController : MonoBehaviour
     private WaitingState state = WaitingState.INVALID;
     private float currentTime = 6;
 
-    private static readonly string waitingBaseLabel = "WAITING FOR OTHER PLAYERS\nPRESS ANY BUTTON TO JOIN";
+    private static readonly string waitingBaseLabel = "PRESS ANY BUTTON TO JOIN";
 
     void Update() {
         switch (state) {
@@ -40,6 +38,7 @@ public class WaitingRoomController : MonoBehaviour
             case WaitingState.GAME:
                 break;
             case WaitingState.END:
+                OnStateEnd();
                 break;
         }
     }
@@ -50,7 +49,7 @@ public class WaitingRoomController : MonoBehaviour
         waitingText.text = winnerIndex >= 0 ? "Player " + (winnerIndex + 1) + " wins!" : "Tie!";
         waitingText.gameObject.SetActive(true);
         countdownTimerText.gameObject.SetActive(false);
-
+        currentTime = 4.0f;
     }
 
     private void OnStateInvalid() {
@@ -73,18 +72,26 @@ public class WaitingRoomController : MonoBehaviour
     }
 
     private void OnStateShouldStart() {
-        state = WaitingState.COUNTDOWN;
-        waitingText.fontSize = 200;
-        currentTime = 3.99f;
+        //state = WaitingState.COUNTDOWN;
+        //currentTime = 3.99f;
+        StartGame();
     }
 
     private void OnStateCountdown() {
+        waitingText.fontSize = 200;
         currentTime -= Time.deltaTime;
         if (currentTime < 1) {
             StartGame();
             return;
         }
         waitingText.text = "" + (int)currentTime;
+    }
+
+    private void OnStateEnd() {
+        currentTime -= Time.deltaTime;
+        if (currentTime <= 0f) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void StartGame() {
