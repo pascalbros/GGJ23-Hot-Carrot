@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DavidJalbert;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -25,7 +26,11 @@ public class PlayerInputController : MonoBehaviour
 
 
     void Start() {
-        MatchMaker.current.OnPlayerAdded(gameObject);
+        if (SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Credits") {
+            MenuMaker.current.OnPlayerAdded(gameObject);
+        } else {
+            MatchMaker.current.OnPlayerAdded(gameObject);
+        }
     }
 
     void Update() {
