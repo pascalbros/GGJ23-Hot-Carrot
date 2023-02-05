@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 5ad8f91aae0c74b7fbba78fd4cd1fe47
+guid: 1c8749a86ce6741c59644da278874064
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: banana
-    second: {fileID: 2100000, guid: 5a67cd64bb66044ea88464ba1ef09636, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

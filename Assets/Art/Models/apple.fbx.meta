@@ -3,7 +3,17 @@ guid: 507a6c222a8de41c3a914fc00c60f0a2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mela
+    second: {fileID: 2100000, guid: 0b3f9a90bb41b40eea5a9b34a09c974f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picciolo
+    second: {fileID: 2100000, guid: 14b1957f694a342a7a1b96da5d354b0b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
