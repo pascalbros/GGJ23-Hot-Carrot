@@ -3,7 +3,37 @@ guid: 2ac0a801331ca44ae8374d8951550d33
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt
+    second: {fileID: 2100000, guid: 66f174238a894496baa12a4bac53bb3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass
+    second: {fileID: 2100000, guid: 1f78a9c3443e248598cc3e8167ab3dd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_bulbs
+    second: {fileID: 2100000, guid: b12c4d7eccfd04c7c8c9efeb708b5c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_lamps
+    second: {fileID: 2100000, guid: b05fc16866a214917a523253571b0803, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stadium_light
+    second: {fileID: 2100000, guid: 0985435d17afc4ff4a88c09cb8109205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall
+    second: {fileID: 2100000, guid: cb77a4d3ff9a44247a63c7d087082e12, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
