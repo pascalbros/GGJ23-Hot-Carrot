@@ -16,8 +16,12 @@ public class WaitingRoomController : MonoBehaviour
     public TextMeshProUGUI waitingText;
     public TextMeshProUGUI countdownTimerText;
 
+    public AudioClip[] timeoutSounds;
+    public GameObject mainAudioSource;
+
     private WaitingState state = WaitingState.INVALID;
     private float currentTime = 6;
+    private bool[] countSoundsPlayed = new bool[4];
 
     private static readonly string waitingBaseLabel = "PRESS ANY BUTTON TO JOIN";
 
@@ -68,6 +72,20 @@ public class WaitingRoomController : MonoBehaviour
 
         if (MatchMaker.current.playersCount == 4 || currentTime < 1) {
             state = WaitingState.SHOULD_START;
+        }
+
+        var intCurrentTime = (int)currentTime;
+        if (intCurrentTime <= 3 && intCurrentTime > 0 && !countSoundsPlayed[intCurrentTime]) {
+            countSoundsPlayed[intCurrentTime] = true;
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Stop();
+            audioSource.PlayOneShot(timeoutSounds[0]);
+        } else if (intCurrentTime == 0 && !countSoundsPlayed[0]) {
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Stop();
+            audioSource.PlayOneShot(timeoutSounds[1]);
+            countSoundsPlayed[0] = true;
+            mainAudioSource.SetActive(true);
         }
     }
 
