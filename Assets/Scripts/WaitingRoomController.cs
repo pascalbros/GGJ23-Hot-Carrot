@@ -67,14 +67,17 @@ public class WaitingRoomController : MonoBehaviour
 
     private void OnStateWaiting() {
         currentTime -= Time.deltaTime;
-        var waitingLabel = waitingBaseLabel + "\n" + (int)currentTime;
+        var intCurrentTime = (int)currentTime;
+        var waitingLabel = waitingBaseLabel + "\n" + intCurrentTime;
+        if (intCurrentTime == 0) {
+            waitingLabel = "";
+        }
         waitingText.text = waitingLabel;
 
         if (MatchMaker.current.playersCount == 4 || currentTime < 1) {
             state = WaitingState.SHOULD_START;
         }
 
-        var intCurrentTime = (int)currentTime;
         if (intCurrentTime <= 3 && intCurrentTime > 0 && !countSoundsPlayed[intCurrentTime]) {
             countSoundsPlayed[intCurrentTime] = true;
             var audioSource = GetComponent<AudioSource>();
