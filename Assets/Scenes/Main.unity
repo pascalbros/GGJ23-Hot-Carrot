@@ -376,6 +376,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
       propertyPath: m_Name
       value: stadium_stands_right
@@ -493,6 +509,18 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
       propertyPath: m_Name
       value: stadium_stands_centerpiece
@@ -672,6 +700,18 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
       propertyPath: m_Name
       value: stadium_stands_centerpiece
@@ -944,6 +984,18 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
       propertyPath: m_Name
       value: stadium_stands_centerpiece
@@ -1784,6 +1836,18 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: f7a3cbb6e04c04ae3bb886d324abb5ba, type: 3}
       propertyPath: m_Name
       value: stadium_stands_centerpiece
@@ -1968,6 +2032,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
       propertyPath: m_Name
       value: stadium_stands_left
@@ -2346,6 +2426,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
       propertyPath: m_Name
       value: stadium_stands_left
@@ -2568,6 +2664,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
       propertyPath: m_Name
       value: stadium_stands_left
@@ -2786,6 +2898,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: d8d822111133c4140ae7a9eafc961da4, type: 3}
       propertyPath: m_Name
       value: stadium_stands_left
@@ -3068,6 +3196,22 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 801fc040ef22e435a9bc83bf52fca28f, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bcf7bb55e8d54e04ba962aac1529f72, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37feeb43590d849b68a7666199ebf162, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c2f01d6869b740e6ba3fc130ef63f99, type: 2}
     - target: {fileID: 919132149155446097, guid: 35561112dd30541a3813fb8ff5256145, type: 3}
       propertyPath: m_Name
       value: stadium_stands_right
